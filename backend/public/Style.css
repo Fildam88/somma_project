@@ -1,0 +1,12 @@
+body {
+
+  background-color: darkgrey;
+
+}
+
+footer {
+  position:fixed;
+  bottom: 8px;
+  right:10px;
+  color :rgb(2, 18, 18)
+}
