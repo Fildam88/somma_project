@@ -93,8 +93,18 @@ app.get("/api/SinA", (req, res) => {
   if (!Number.isFinite(a)) {
     return res.status(400).json({ errore: "a  devono essere numeri" });
   }
+let risultato = Math.sin(a*Math.PI/180);
+if (!Number.isFinite(risultato)){
+  risultato=0;
+}
 
-  res.json({ risultato: Math.sin(a* Math.PI / 180) });
+if(Math.abs(risultato)<1e-10){
+  risultato=0
+;}
+
+  res.json({ risultato });
+ 
+  
 });
 
 
@@ -108,7 +118,18 @@ app.get("/api/SinB", (req, res) => {
     return res.status(400).json({ errore: "b  devono essere numeri" });
   }
   
-    res.json({ risultato: Math.sin(b* Math.PI / 180) });
+let risultato = Math.sin(b*Math.PI/180);
+if (!Number.isFinite(risultato)){
+  risultato=0;
+}
+
+if(Math.abs(risultato)<1e-10){
+  risultato=0
+;}
+
+  res.json({ risultato });
+ 
+  
 });
 
 
