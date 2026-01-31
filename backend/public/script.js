@@ -96,9 +96,20 @@ document.getElementById("btnSinB").addEventListener("click", async () => {
   const b = Number(document.getElementById("b").value);
   
 
-  const r = await fetch(`/api/SinB?b=${b}`);
+  const r = await fetch(`/api/SinB?a=${b}`);
   const data = await r.json();
 
   document.getElementById("res").textContent = data.risultato;
 
+});
+
+
+["a", "b"].forEach(id => {
+  const input = document.getElementById(id);
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      document.activeElement.blur();
+    }
+  });
 });
