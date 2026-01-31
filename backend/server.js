@@ -111,7 +111,32 @@ app.get("/api/SinB", (req, res) => {
     res.json({ risultato: Math.sin(b* Math.PI / 180)  });
 });
 
+// API: POST /Cos (a) 
 
+app.get("/api/CosA", (req, res) => {
+  const a = Number(req.query.a);
+  
+
+  if (!Number.isFinite(a)) {
+    return res.status(400).json({ errore: "a  devono essere numeri" });
+  }
+
+  res.json({ risultato: Math.cos(a* Math.PI / 180) });
+});
+
+
+// API: POST /Cos  (b)
+
+app.get("/api/CosB", (req, res) => {
+  const b = Number(req.query.b);
+  
+
+  if (!Number.isFinite(b)) {
+    return res.status(400).json({ errore: "b  devono essere numeri" });
+  }
+  
+    res.json({ risultato: Math.cos(b* Math.PI / 180)  });
+});
 
 
 

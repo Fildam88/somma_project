@@ -96,12 +96,53 @@ document.getElementById("btnSinB").addEventListener("click", async () => {
   const b = Number(document.getElementById("b").value);
   
 
-  const r = await fetch(`/api/SinB?a=${b}`);
+  const r = await fetch(`/api/SinB?b=${b}`);
   const data = await r.json();
 
   document.getElementById("res").textContent = data.risultato;
 
 });
+
+
+//Cos A
+
+document.getElementById("btnCosA").addEventListener("click", async () => {
+  const a = Number(document.getElementById("a").value);
+  
+
+  const r = await fetch(`/api/CosA?a=${a}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
+
+
+//Cos B
+
+document.getElementById("btnCosB").addEventListener("click", async () => {
+  const b = Number(document.getElementById("b").value);
+  
+
+  const r = await fetch(`/api/CosB?b=${b}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ["a", "b"].forEach(id => {

@@ -52,7 +52,7 @@ letter-spacing:0,5px;
   display:flex;
   flex-direction: column;
   width:min(660px, 100%);
-  min-height: 420px;
+  min-height: 520px;
   background:#0b1220;
   border:1px solid rgba(255,255,255,0.08);
   border-radius:16px;
