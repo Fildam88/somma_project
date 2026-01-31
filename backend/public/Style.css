@@ -1,12 +1,113 @@
-body {
+/* RESET */
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; width:100%; height:100%; }
 
-  background-color: darkgrey;
-
+/* SFONDO */
+body{
+  font-family: Arial, sans-serif;
+  background: #42495a;
+  color: #e5e7eb;
 }
 
-footer {
-  position:fixed;
-  bottom: 8px;
-  right:10px;
-  color :rgb(2, 18, 18)
+/* TOPBAR */
+.topbar{
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:56px;
+  padding:0 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#111827;
+  z-index:9999;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.brand{ font-weight:700;
+font-size: 28px;
+letter-spacing:0,5px;
+
+}
+.btnTop{
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(255,255,255,0.06);
+  color:#e5e7eb;
+  cursor:pointer;
+}
+
+/* PAGINA */
+.page{
+  padding-top: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  display:flex;
+  justify-content:center;
+}
+
+/* CARD */
+.card{
+  display:flex;
+  flex-direction: column;
+  width:min(660px, 100%);
+  min-height: 420px;
+  background:#0b1220;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:16px;
+  margin-top: 24px;
+}
+
+/* INPUT 2 COLONNE */
+.row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  margin-bottom:28px;
+}
+input{
+  width:100%;
+  padding:26px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:#111827;
+  color:#e5e7eb;
+}
+
+/* BOTTONI 2 COLONNE */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+}
+button{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.06);
+  color:#e5e7eb;
+  cursor:pointer;
+}
+
+/* RISULTATO */
+.result{
+  margin-top:auto;
+  margin-bottom: 3px;
+  padding:12px;
+  border-radius:12px;
+  background:rgba(59,130,246,0.10);
+  border:1px solid rgba(59,130,246,0.25);
+}
+#res{ font-weight:700; }
+
+/* FOOTER */
+footer{
+  position: fixed;
+  bottom: 10px;
+  right: 12px;
+  font-size: 20px;
+  color: rgba(229,231,235,0.55);
 }

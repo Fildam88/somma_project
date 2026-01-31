@@ -77,11 +77,46 @@ app.get("/api/RadiceQuadraA", (req, res) => {
   
 
   if (!Number.isFinite(b)) {
-    return res.status(400).json({ errore: "a e b devono essere numeri" });
+    return res.status(400).json({ errore: "a  devono essere numeri" });
   }
 
   res.json({ risultato: Math.sqrt(b) });
 });
+
+
+// API: POST /Sin (a) 
+
+app.get("/api/SinA", (req, res) => {
+  const a = Number(req.query.a);
+  
+
+  if (!Number.isFinite(a)) {
+    return res.status(400).json({ errore: "a  devono essere numeri" });
+  }
+
+  res.json({ risultato: Math.sin(a* Math.PI / 180) });
+});
+
+
+// API: POST /Sin  (b)
+
+app.get("/api/SinB", (req, res) => {
+  const b = Number(req.query.b);
+  
+
+  if (!Number.isFinite(b)) {
+    return res.status(400).json({ errore: "b  devono essere numeri" });
+  }
+  
+    res.json({ risultato: Math.sin(b* Math.PI / 180)  });
+});
+
+
+
+
+
+
+
 
 
 

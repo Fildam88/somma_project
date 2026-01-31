@@ -1,3 +1,9 @@
+document.getElementById("btnReset")?.addEventListener("click", () => {
+  document.getElementById("a").value = "";
+  document.getElementById("b").value = "";
+  document.getElementById("res").textContent = "-";
+});
+
 document.getElementById("btn").addEventListener("click", async () => {
   const a = Number(document.getElementById("a").value);
   const b = Number(document.getElementById("b").value);
@@ -70,3 +76,29 @@ document.getElementById("btnRadiceQuadraB").addEventListener("click", async () =
 
 
 
+//Sin A
+
+document.getElementById("btnSinA").addEventListener("click", async () => {
+  const a = Number(document.getElementById("a").value);
+  
+
+  const r = await fetch(`/api/SinA?a=${a}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
+
+
+//Sin B
+
+document.getElementById("btnSinB").addEventListener("click", async () => {
+  const b = Number(document.getElementById("b").value);
+  
+
+  const r = await fetch(`/api/SinB?b=${b}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
