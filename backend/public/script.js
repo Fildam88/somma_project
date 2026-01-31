@@ -103,6 +103,37 @@ document.getElementById("btnSinB").addEventListener("click", async () => {
 
 });
 
+//Sinh A
+
+document.getElementById("btnSinhA").addEventListener("click", async () => {
+  const a = Number(document.getElementById("a").value);
+  
+
+  const r = await fetch(`/api/SinhA?a=${a}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
+
+
+//Sinh B
+
+document.getElementById("btnSinhB").addEventListener("click", async () => {
+  const b = Number(document.getElementById("b").value);
+  
+
+  const r = await fetch(`/api/SinhB?b=${b}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
+
+
+
+
+
 
 //Cos A
 
@@ -131,6 +162,32 @@ document.getElementById("btnCosB").addEventListener("click", async () => {
 
 });
 
+//Cosh A
+
+document.getElementById("btnCoshA").addEventListener("click", async () => {
+  const a = Number(document.getElementById("a").value);
+  
+
+  const r = await fetch(`/api/CoshA?a=${a}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
+
+
+//Cosh B
+
+document.getElementById("btnCoshB").addEventListener("click", async () => {
+  const b = Number(document.getElementById("b").value);
+  
+
+  const r = await fetch(`/api/CoshB?b=${b}`);
+  const data = await r.json();
+
+  document.getElementById("res").textContent = data.risultato;
+
+});
 
 
 

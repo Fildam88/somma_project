@@ -108,8 +108,38 @@ app.get("/api/SinB", (req, res) => {
     return res.status(400).json({ errore: "b  devono essere numeri" });
   }
   
-    res.json({ risultato: Math.sin(b* Math.PI / 180)  });
+    res.json({ risultato: Math.sin(b* Math.PI / 180) });
 });
+
+
+
+// API: POST /Sinh (a) 
+
+app.get("/api/SinhA", (req, res) => {
+  const a = Number(req.query.a);
+  
+
+  if (!Number.isFinite(a)) {
+    return res.status(400).json({ errore: "a  devono essere numeri" });
+  }
+
+  res.json({ risultato: Math.sinh(a* Math.PI / 180) });
+});
+
+
+// API: POST /Sinh  (b)
+
+app.get("/api/SinhB", (req, res) => {
+  const b = Number(req.query.b);
+  
+
+  if (!Number.isFinite(b)) {
+    return res.status(400).json({ errore: "b  devono essere numeri" });
+  }
+  
+    res.json({ risultato: Math.sinh(b* Math.PI / 180) });
+});
+
 
 // API: POST /Cos (a) 
 
@@ -138,7 +168,32 @@ app.get("/api/CosB", (req, res) => {
     res.json({ risultato: Math.cos(b* Math.PI / 180)  });
 });
 
+// API: POST /Cosh (a) 
 
+app.get("/api/CoshA", (req, res) => {
+  const a = Number(req.query.a);
+  
+
+  if (!Number.isFinite(a)) {
+    return res.status(400).json({ errore: "a  devono essere numeri" });
+  }
+
+  res.json({ risultato: Math.cosh(a* Math.PI / 180) });
+});
+
+
+// API: POST /Cosh  (b)
+
+app.get("/api/CoshB", (req, res) => {
+  const b = Number(req.query.b);
+  
+
+  if (!Number.isFinite(b)) {
+    return res.status(400).json({ errore: "b  devono essere numeri" });
+  }
+  
+    res.json({ risultato: Math.cosh(b* Math.PI / 180)  });
+});
 
 
 
